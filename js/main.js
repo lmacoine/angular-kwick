@@ -7,7 +7,7 @@ app.config(function($sceDelegateProvider) {
 	    // Allow same origin resource loads.
 	    'self',
 	    // Allow loading from our assets domain.  Notice the difference between * and **.
-	    'http://greenvelvet.alwaysdata.net/kwick/api/**'
+	    'https://greenvelvet.alwaysdata.net/kwick/api/**'
 	  ]);
 });
 
@@ -17,7 +17,7 @@ app.controller('HomeController', function($http, $scope) {
 	$scope.mdp_inscription = '';
 
 	$scope.inscription = function() {
-		var url_cible = 'http://greenvelvet.alwaysdata.net/kwick/api/signup/'+ $scope.pseudo_inscription +'/'+ $scope.mdp_inscription;
+		var url_cible = 'https://greenvelvet.alwaysdata.net/kwick/api/signup/'+ $scope.pseudo_inscription +'/'+ $scope.mdp_inscription;
 
 		$http
 		.jsonp(url_cible)
@@ -42,7 +42,7 @@ app.controller('HomeController', function($http, $scope) {
 	$scope.mdp_connexion = '';
 
 	$scope.connexion = function() {
-		var url_cible = 'http://greenvelvet.alwaysdata.net/kwick/api/login/'+ $scope.pseudo_connexion +'/'+ $scope.mdp_connexion;
+		var url_cible = 'https://greenvelvet.alwaysdata.net/kwick/api/login/'+ $scope.pseudo_connexion +'/'+ $scope.mdp_connexion;
 
 		$http
 		.jsonp(url_cible)
@@ -73,7 +73,7 @@ app.controller('MessageController', function($http, $scope) {
 
 	$scope.deconnexion = function() {
 
-		var url_cible = 'http://greenvelvet.alwaysdata.net/kwick/api/logout/'+ TOKEN +'/'+ USER_ID;
+		var url_cible = 'https://greenvelvet.alwaysdata.net/kwick/api/logout/'+ TOKEN +'/'+ USER_ID;
 
 		$http
 		.jsonp(url_cible)
@@ -98,7 +98,7 @@ app.controller('MessageController', function($http, $scope) {
 	$scope.liste_utilisateurs = [];
 
 	$scope.recuperer_utilisateurs = function() {
-		var url_cible = 'http://greenvelvet.alwaysdata.net/kwick/api/user/logged/' + TOKEN;
+		var url_cible = 'https://greenvelvet.alwaysdata.net/kwick/api/user/logged/' + TOKEN;
 
 		$http
 		.jsonp(url_cible)
@@ -109,7 +109,7 @@ app.controller('MessageController', function($http, $scope) {
 	}
 
 	$scope.envoyer_message = function() {
-		var url_cible = 'http://greenvelvet.alwaysdata.net/kwick/api/say/'+ TOKEN + '/' + USER_ID + '/' + $scope.message ;
+		var url_cible = 'https://greenvelvet.alwaysdata.net/kwick/api/say/'+ TOKEN + '/' + USER_ID + '/' + $scope.message ;
 		$http
 		.jsonp(url_cible)
 		.then(function(reponse_serveur) {
@@ -121,7 +121,7 @@ app.controller('MessageController', function($http, $scope) {
 
 	$scope.afficher_messages = function() {
 		//remplacer avec le token et laisser le timestamp (= signature intemporelle) (0 = tous les msgs)
-		var url_cible = 'http://greenvelvet.alwaysdata.net/kwick/api/talk/list/' + TOKEN + '/0';
+		var url_cible = 'https://greenvelvet.alwaysdata.net/kwick/api/talk/list/' + TOKEN + '/0';
 		$http
 		.jsonp(url_cible)
 		.then(function(reponse_serveur) {

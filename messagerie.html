@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<meta charset="utf-8">
+<head>
+	<title>RainbowCake</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body ng-app="rainbowCake" ng-controller="MessageController as msg">
+<!-- AJOUT BONJOUR {{PSEUDO}} ! DANS NAVBAR-->
+	<!-- navbar en transparence + bouton de déconnexion (logout) -->
+	<nav class="navbar">
+		<div class="container-fluid">
+			<div class="">
+				<a class="navbar-brand" href="#">RainbowCake</a>
+			</div> <!-- /.navbar-header -->
+			<div class="pull-right">
+				<button type="button" class="btn btn-lpink" ng-click="deconnexion()">
+  			<span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Déconnexion</button>
+			</div><!--/.navbar-right -->
+			
+ 		</div> <!-- /.container-fluid -->
+	</nav> <!-- /.navbar -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-12 col-lg-12">
+				<div class="well well-sm well-success liste_personnes">
+					<span ng-repeat="utilisateur in liste_utilisateurs">
+						{{utilisateur}}{{$last ? '' : ', '}}
+					</span>
+				</div> <!-- /.liste_personnes -->
+
+				<div class="well conversation"> <!-- droite : fenêtre conversation avec les derniers messages (talk/list) -->
+				<p ng-repeat="message in messages">
+					<b>{{ message.user_name }}</b> : 
+					{{ message.content }}
+				</p>
+				</div> <!-- /.conversation -->
+			</div> <!-- /.col-xs-12 col-md-12 col-lg-12 -->
+		</div> <!-- /.row -->
+	</div> <!-- container -->
+
+	<footer>
+		<div class="container">
+			<hr>
+			<form novalidate> <!-- formulaire d'envoi -->
+				<div class="form-group col-xs-10 col-md-10 col-lg-10">
+					<input type="text" name="message" size="140" class="form-control" ng-model="message" required>
+				</div>
+				<button type="submit" ng-click="envoyer_message()" value="send" class="btn btn-indigo col-xs-2 col-md-2 col-lg-2">J'envoie</button>
+			</form>
+		</div>
+	</footer>
+
+	<script src="node_modules/angular/angular.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

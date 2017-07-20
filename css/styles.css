@@ -1,0 +1,87 @@
+body {
+	background-image: url(../img/rainbow_background.jpg);
+}
+
+/* page 1 */
+.navbar {
+	background-color: rgba(153, 153, 147, 0.3);
+}
+
+
+/* blocs inscription / connexion */
+@media (min-width: @screen-md-min) { 
+    .fond_blanc {
+        margin: 30px;
+    }
+}
+
+h2 {
+    text-align: center;
+}
+
+.fond_blanc {
+	background-color: rgba(153, 153, 147, 0.3);
+	border-radius : 4px;
+	padding: 20px;
+	margin: 45px;
+}
+
+/*boutons*/
+.btn-deep-purple {
+    color: #f8f8f8;
+    background-color: #6639B6;
+    border-color: #5e35a8;
+}
+.btn-deep-purple:hover {
+    color: #fff;
+    background-color: #5e35a8;
+    border-color: #5e35a8;
+}
+
+/* page 2 */
+/* bouton déconnexion */
+.btn-lpink {
+    color: #E81D62;
+    background-color: transparent;
+    border-color: #c51954;
+    margin-right: 8px;
+    margin-top: 10px;
+}
+.btn-lpink:hover {
+    color: #fff;
+    background-color: #E81D62;
+    border-color: #E81D62;
+}
+
+
+/* liste des personnes connectées et non connectées */
+
+/* .row .well-sm {
+    background-color: rgba(127, 63, 191, 0.31);
+} */
+
+.liste_personnes {
+	border: 1px solid #7F3FBF;
+	margin : 22px;
+}
+
+/* fenêtre conversation */
+.conversation {
+	border: 1px solid #3E50B4;
+	margin: 22px;
+    overflow-y: scroll;
+    height: 400px;
+    width: ;
+}
+
+/* bouton submit */
+.btn-indigo {
+    color: #f8f8f8;
+    background-color: #3E50B4;
+    border-color: #3949a2;
+}
+.btn-indigo:hover {
+    color: #fff;
+    background-color: #3949a2;
+    border-color: #3949a2;
+}

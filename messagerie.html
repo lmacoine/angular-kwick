@@ -9,33 +9,32 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body ng-app="rainbowCake" ng-controller="MessageController as msg">
-<!-- AJOUT BONJOUR {{PSEUDO}} ! DANS NAVBAR-->
-	<!-- navbar en transparence + bouton de déconnexion (logout) -->
+
+	<!-- navbar + bouton de déconnexion -->
 	<nav class="navbar">
 		<div class="container-fluid">
-			<div class="">
+			<div>
 				<a class="navbar-brand" href="#">RainbowCake</a>
-			</div> <!-- /.navbar-header -->
+			</div>
 			<div class="pull-right">
 				<button type="button" class="btn btn-lpink" ng-click="deconnexion()">
   			<span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Déconnexion</button>
-			</div><!--/.navbar-right -->
-			
+			</div>
  		</div> <!-- /.container-fluid -->
 	</nav> <!-- /.navbar -->
 
+	<!-- liste des utlisateurs connectés + fenêtre de conversation -->
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 col-md-12 col-lg-12">
-				<div class="well well-sm well-success liste_personnes">
+				<div class="well well-sm success liste_personnes">
 					<span ng-repeat="utilisateur in liste_utilisateurs">
-						{{utilisateur}}{{$last ? '' : ', '}}
+						<b>{{utilisateur}}{{$last ? '' : ', '}}</b>
 					</span>
 				</div> <!-- /.liste_personnes -->
-
-				<div class="well conversation"> <!-- droite : fenêtre conversation avec les derniers messages (talk/list) -->
+				<div class="well conversation">
 				<p ng-repeat="message in messages">
-					<b>{{ message.user_name }}</b> : 
+					<b class="text-capitalize">{{ message.user_name }}</b> : 
 					{{ message.content }}
 				</p>
 				</div> <!-- /.conversation -->
@@ -43,10 +42,11 @@
 		</div> <!-- /.row -->
 	</div> <!-- container -->
 
+	<!-- formulaire d'envoi -->
 	<footer>
 		<div class="container">
 			<hr>
-			<form novalidate> <!-- formulaire d'envoi -->
+			<form novalidate> 
 				<div class="form-group col-xs-10 col-md-10 col-lg-10">
 					<input type="text" name="message" size="140" class="form-control" ng-model="message" required>
 				</div>

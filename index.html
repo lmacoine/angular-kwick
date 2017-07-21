@@ -9,7 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body ng-app="rainbowCake" class="container-fluid">
-	<!-- navbar en transparence avec titre -->
+	
+	<!-- navbar  -->
 	<nav class="navbar">
   		<div class="container-fluid">
 		    <div class="navbar-header">
@@ -17,12 +18,18 @@
 		    </div>
   		</div><!-- /.container-fluid -->
 	</nav> <!-- /.navbar -->
-<!-- AJOUT TEXTE -->
+
+	<!-- phrase d'accroche  -->
+	<div class="container-fluid">
+		<h2 class="text-center">Messagerie simple et fiable.</h2>
+	</div>
+
+	<!-- inscription et connexion  -->
 	<div class="container-fluid" ng-controller="HomeController as home">
 		<div class="row">
 			<!-- Inscription (signup) -->
-			<div class="col-xs-10 col-sm-10 col-md-6 col-lg-5 fond_blanc">
-				<h2><ins>Inscription</ins></h2><br/>
+			<div class="col-xs-10 col-sm-10 col-md-10 col-lg-5 fond_blanc">
+				<h3 class="text-center"><ins>Inscription</ins></h3><br/>
 				<form novalidate class="form-horizontal" ng-submit="inscription()">
 					<div class="form-group">
 						<label for="pseudo_inscription">Pseudonyme</label>
@@ -37,8 +44,8 @@
 				</form>
 			</div>
 			<!-- Connexion (login) -->
-			<div class="col-xs-10 col-sm-10 col-md-6 col-lg-5 fond_blanc">
-				<h2><ins>Connexion</ins></h2><br/>
+			<div class="col-xs-10 col-sm-10 col-md-10 col-lg-5 fond_blanc">
+				<h3 class="text-center"><ins>Connexion</ins></h3><br/>
 				<form novalidate class="form-horizontal" ng-submit="connexion()">
 					<div class="form-group">
 						<label for="pseudo_connexion">Pseudonyme</label>
@@ -48,15 +55,10 @@
 						<label for="mdp_connexion">Mot de passe</label>
 						<input type="password" class="form-control" id="mdp_connexion" ng-model="mdp_connexion" placeholder="******">
 					</div>
-					<!-- <div class="checkbox">
-						<label>
-							<input type="checkbox"> Remember me
-						</label>
-					</div><br/> -->
-					  <button class="btn btn-deep-purple btn-lg btn-block center-block" type="submit">Je me connecte</button>
+					<button class="btn btn-deep-purple btn-lg btn-block center-block" type="submit">Je me connecte</button>
 				</form>
-			</div> <!-- /.row center-block -->
-		</div>
+			</div> 
+		</div><!-- /.row -->
 	</div> <!-- /.container -->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>

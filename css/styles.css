@@ -3,20 +3,18 @@ body {
 }
 
 /* page 1 */
+/* titres */
+h2 {
+    color: #ffffff;
+}
+
+h3 {
+    color: #ffffff;
+}
+
+/* navbar */
 .navbar {
 	background-color: rgba(153, 153, 147, 0.3);
-}
-
-
-/* blocs inscription / connexion */
-@media (min-width: @screen-md-min) { 
-    .fond_blanc {
-        margin: 30px;
-    }
-}
-
-h2 {
-    text-align: center;
 }
 
 .fond_blanc {
@@ -26,7 +24,7 @@ h2 {
 	margin: 45px;
 }
 
-/*boutons*/
+/*bouton je me connecte*/
 .btn-deep-purple {
     color: #f8f8f8;
     background-color: #6639B6;
@@ -37,6 +35,8 @@ h2 {
     background-color: #5e35a8;
     border-color: #5e35a8;
 }
+
+
 
 /* page 2 */
 /* bouton déconnexion */
@@ -53,28 +53,25 @@ h2 {
     border-color: #E81D62;
 }
 
-
-/* liste des personnes connectées et non connectées */
-
-/* .row .well-sm {
-    background-color: rgba(127, 63, 191, 0.31);
-} */
-
+/* liste des personnes connectées */
 .liste_personnes {
-	border: 1px solid #7F3FBF;
+	border: 1px solid #3F4ABF;
 	margin : 22px;
+    background-color: rgba(63, 74, 191, 0.5);
+    color: #000000;
 }
 
 /* fenêtre conversation */
 .conversation {
-	border: 1px solid #3E50B4;
+	background-color: rgba(153, 153, 147, 0.3);
+    border-radius : 4px;
+    color: #000000;
 	margin: 22px;
     overflow-y: scroll;
     height: 400px;
-    width: ;
 }
 
-/* bouton submit */
+/* bouton j'envoie */
 .btn-indigo {
     color: #f8f8f8;
     background-color: #3E50B4;
